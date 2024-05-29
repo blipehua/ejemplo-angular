@@ -1,0 +1,26 @@
+.spacer {
+  flex: 1 1 auto;
+}
+.margen-1{
+  margin-left: 3em;
+
+}
+
+mat-toolbar {
+  color: white;
+
+  background-color: rgb(25, 175, 225);
+}
+
+
+
+span {
+  margin-left: 2em;
+  opacity: 0.8;
+}
+
+img {
+  margin-left: 0.5em;
+  height: 80px !important;
+  width: 130px !important;
+}

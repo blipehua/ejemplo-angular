@@ -1,0 +1,17 @@
+import { NgModule } from '@angular/core';
+import { EjemploAngularComponent } from './ejemplo-angular.component'; 
+
+
+
+@NgModule({
+  declarations: [
+    
+  ],
+  imports: [
+    EjemploAngularComponent
+  ],
+  exports: [
+    EjemploAngularComponent
+  ]
+})
+export class EjemploAngularModule { }

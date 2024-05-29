@@ -1,0 +1,499 @@
+{
+    "pipes": [],
+    "interfaces": [
+        {
+            "name": "datoColumna",
+            "id": "interface-datoColumna-e0d4537260426cc79bb7b8e6f6b7b67b865a63a12a6b2c4860e3190cee68e5540f8a7b7430560de1fb1b89d193d653f47c8afdd9d9c43acdce644c8f55f8f266",
+            "file": "projects/ejemplo-angular/src/stories/gva-tabla.stories.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "import { moduleMetadata, type Meta, type StoryObj } from '@storybook/angular';\r\n\r\nimport { fn } from '@storybook/test';\r\n\r\nimport { MatButtonModule } from '@angular/material/button';\r\nimport { MatDividerModule } from '@angular/material/divider';\r\nimport { GvaTablaComponent } from '../lib/gva-tabla/gva-tabla.component';\r\nimport { provideAnimations } from '@angular/platform-browser/animations';\r\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\r\n// import { EjemploAngularModule } from '../lib/ejemplo-angular.module';\r\n\r\n\r\ninterface datoColumna {\r\n  position: number;\r\n  name: string;\r\n  weight: number;\r\n  symbol: string;\r\n\r\n}\r\nconst meta: Meta<GvaTablaComponent> = {\r\n  title: 'GVA/General/gva-tabla',\r\n  component: GvaTablaComponent,\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [],\r\n      imports: [BrowserAnimationsModule,GvaTablaComponent, MatButtonModule, MatDividerModule],\r\n      providers: [\r\n        provideAnimations()\r\n      ]\r\n    }),\r\n  ],\r\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs\r\n  tags: ['autodocs'],\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n  argTypes: {\r\n    nombreColumnas: {\r\n      control: { type: 'array' },\r\n      description: 'Nombre de las columnas',\r\n      defaultValue: ['POSITION', 'CONCEPTE', 'DESCRIPCIO', 'ORGANISME_EMISSOR', 'POSADA_DISPOSICIO', 'TIPUS_ENVIAMENT', 'TITULAR', 'ESTAT']\r\n\r\n    },\r\n    dataSource: {\r\n      control: { type: 'array' },\r\n      description: 'Datos de la tabla',\r\n      defaultValue: [\r\n        { POSITION: 1, CONCEPTE: '1', DESCRIPCIO: 'Hydrogen', ORGANISME_EMISSOR: 'o1', POSADA_DISPOSICIO: 'H', TIPUS_ENVIAMENT: 't1', TITULAR: 'tit1', ESTAT: 'e1' },\r\n        { POSITION: 2, CONCEPTE: '2', DESCRIPCIO: 'Helium', ORGANISME_EMISSOR: 'o2', POSADA_DISPOSICIO: 'He', TIPUS_ENVIAMENT: 't2', TITULAR: 'tit2', ESTAT: 'e2' },\r\n        { POSITION: 3, CONCEPTE: '3', DESCRIPCIO: 'Lithium', ORGANISME_EMISSOR: 'o3', POSADA_DISPOSICIO: 'Li', TIPUS_ENVIAMENT: 't3', TITULAR: 'tit3', ESTAT: 'e3' },\r\n        { POSITION: 4, CONCEPTE: '4', DESCRIPCIO: 'Beryllium', ORGANISME_EMISSOR: 'o4', POSADA_DISPOSICIO: 'Be', TIPUS_ENVIAMENT: 't4', TITULAR: 'tit4', ESTAT: 'e4' },\r\n        { POSITION: 5, CONCEPTE: '5', DESCRIPCIO: 'Boron', ORGANISME_EMISSOR: 'o5', POSADA_DISPOSICIO: 'B', TIPUS_ENVIAMENT: 't5', TITULAR: 'tit5', ESTAT: 'e5' },\r\n        { POSITION: 6, CONCEPTE: '6', DESCRIPCIO: 'Carbon', ORGANISME_EMISSOR: 'o6', POSADA_DISPOSICIO: 'C', TIPUS_ENVIAMENT: 't6', TITULAR: 'tit6', ESTAT: 'e6' },\r\n        { POSITION: 7, CONCEPTE: '7', DESCRIPCIO: 'Nitrogen', ORGANISME_EMISSOR: 'o7', POSADA_DISPOSICIO: 'N', TIPUS_ENVIAMENT: 't7', TITULAR: 'tit7', ESTAT: 'e7' },\r\n        { POSITION: 8, CONCEPTE: '8', DESCRIPCIO: 'Oxygen', ORGANISME_EMISSOR: 'o8', POSADA_DISPOSICIO: 'O', TIPUS_ENVIAMENT: 't8', TITULAR: 'tit8', ESTAT: 'e8' },\r\n        { POSITION: 9, CONCEPTE: '9', DESCRIPCIO: 'Fluorine', ORGANISME_EMISSOR: 'o9', POSADA_DISPOSICIO: 'F', TIPUS_ENVIAMENT: 't9', TITULAR: 'tit9', ESTAT: 'e9' },\r\n        { POSITION: 10, CONCEPTE: '10', DESCRIPCIO: 'Neon', ORGANISME_EMISSOR: 'o10', POSADA_DISPOSICIO: 'Ne', TIPUS_ENVIAMENT: 't10', TITULAR: 'tit10', ESTAT: 'e10' }\r\n\r\n\r\n      ]\r\n\r\n    }\r\n  }\r\n\r\n};\r\n\r\nexport default meta;\r\ntype Story = StoryObj<GvaTablaComponent>;\r\n\r\nexport const TablaSimple: Story = {\r\n  args: {\r\n    nombreColumnas: ['POSITION', 'CONCEPTE', 'DESCRIPCIO', 'ORGANISME_EMISSOR', 'POSADA_DISPOSICIO', 'TIPUS_ENVIAMENT', 'TITULAR', 'ESTAT']\r\n\r\n  }\r\n};\r\n\r\n\r\n",
+            "properties": [
+                {
+                    "name": "name",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 15
+                },
+                {
+                    "name": "position",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 14
+                },
+                {
+                    "name": "symbol",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 17
+                },
+                {
+                    "name": "weight",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 16
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 171,
+            "methods": [],
+            "extends": []
+        }
+    ],
+    "injectables": [],
+    "guards": [],
+    "interceptors": [],
+    "classes": [],
+    "directives": [],
+    "components": [],
+    "modules": [],
+    "miscellaneous": {
+        "variables": [
+            {
+                "name": "Dinote",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ejemplo-angular/src/stories/gva-cabecera.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n   ci: 'Dinote'\r\n   \r\n  }\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ejemplo-angular/src/stories/gva-cabecera.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<GvaCabeceraComponent>",
+                "defaultValue": "{\r\n  title: 'GVA/General/gva-cabecera',\r\n  component: GvaCabeceraComponent,\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [],\r\n      imports: [GvaCabeceraComponent,MatButtonModule, MatDividerModule],\r\n    }),\r\n  ],\r\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs\r\n  tags: ['autodocs'],\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n  argTypes: {\r\n    ci:{\r\n      control: { type:'text'},\r\n      description: 'Nombre del CI',\r\n      defaultValue: 'Dinote'\r\n\r\n    },\r\n    logo:{\r\n      description: 'Logo de la cabecera',\r\n      options: ['gv_blanco.png', 'gv_rojo.png', 'gv_negro.png'],\r\n      control: { type:'select'}\r\n    } \r\n  },\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ejemplo-angular/src/stories/gva-popup.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<GvaPopup>",
+                "defaultValue": "{\r\n  title: 'GVA/Marte/gva-marte-popup',\r\n  component: GvaPopup,\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [],\r\n      imports: [GvaPopup,MatButtonModule, MatDividerModule],\r\n    }),\r\n  ],\r\n\r\n  tags: ['autodocs'],\r\n  parameters: {\r\n    \r\n    layout: 'fullscreen',\r\n  },\r\n  args: {\r\n   nombre: 'Abrir',\r\n  },\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ejemplo-angular/src/stories/gva-tabla.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<GvaTablaComponent>",
+                "defaultValue": "{\r\n  title: 'GVA/General/gva-tabla',\r\n  component: GvaTablaComponent,\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [],\r\n      imports: [BrowserAnimationsModule,GvaTablaComponent, MatButtonModule, MatDividerModule],\r\n      providers: [\r\n        provideAnimations()\r\n      ]\r\n    }),\r\n  ],\r\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs\r\n  tags: ['autodocs'],\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n  argTypes: {\r\n    nombreColumnas: {\r\n      control: { type: 'array' },\r\n      description: 'Nombre de las columnas',\r\n      defaultValue: ['POSITION', 'CONCEPTE', 'DESCRIPCIO', 'ORGANISME_EMISSOR', 'POSADA_DISPOSICIO', 'TIPUS_ENVIAMENT', 'TITULAR', 'ESTAT']\r\n\r\n    },\r\n    dataSource: {\r\n      control: { type: 'array' },\r\n      description: 'Datos de la tabla',\r\n      defaultValue: [\r\n        { POSITION: 1, CONCEPTE: '1', DESCRIPCIO: 'Hydrogen', ORGANISME_EMISSOR: 'o1', POSADA_DISPOSICIO: 'H', TIPUS_ENVIAMENT: 't1', TITULAR: 'tit1', ESTAT: 'e1' },\r\n        { POSITION: 2, CONCEPTE: '2', DESCRIPCIO: 'Helium', ORGANISME_EMISSOR: 'o2', POSADA_DISPOSICIO: 'He', TIPUS_ENVIAMENT: 't2', TITULAR: 'tit2', ESTAT: 'e2' },\r\n        { POSITION: 3, CONCEPTE: '3', DESCRIPCIO: 'Lithium', ORGANISME_EMISSOR: 'o3', POSADA_DISPOSICIO: 'Li', TIPUS_ENVIAMENT: 't3', TITULAR: 'tit3', ESTAT: 'e3' },\r\n        { POSITION: 4, CONCEPTE: '4', DESCRIPCIO: 'Beryllium', ORGANISME_EMISSOR: 'o4', POSADA_DISPOSICIO: 'Be', TIPUS_ENVIAMENT: 't4', TITULAR: 'tit4', ESTAT: 'e4' },\r\n        { POSITION: 5, CONCEPTE: '5', DESCRIPCIO: 'Boron', ORGANISME_EMISSOR: 'o5', POSADA_DISPOSICIO: 'B', TIPUS_ENVIAMENT: 't5', TITULAR: 'tit5', ESTAT: 'e5' },\r\n        { POSITION: 6, CONCEPTE: '6', DESCRIPCIO: 'Carbon', ORGANISME_EMISSOR: 'o6', POSADA_DISPOSICIO: 'C', TIPUS_ENVIAMENT: 't6', TITULAR: 'tit6', ESTAT: 'e6' },\r\n        { POSITION: 7, CONCEPTE: '7', DESCRIPCIO: 'Nitrogen', ORGANISME_EMISSOR: 'o7', POSADA_DISPOSICIO: 'N', TIPUS_ENVIAMENT: 't7', TITULAR: 'tit7', ESTAT: 'e7' },\r\n        { POSITION: 8, CONCEPTE: '8', DESCRIPCIO: 'Oxygen', ORGANISME_EMISSOR: 'o8', POSADA_DISPOSICIO: 'O', TIPUS_ENVIAMENT: 't8', TITULAR: 'tit8', ESTAT: 'e8' },\r\n        { POSITION: 9, CONCEPTE: '9', DESCRIPCIO: 'Fluorine', ORGANISME_EMISSOR: 'o9', POSADA_DISPOSICIO: 'F', TIPUS_ENVIAMENT: 't9', TITULAR: 'tit9', ESTAT: 'e9' },\r\n        { POSITION: 10, CONCEPTE: '10', DESCRIPCIO: 'Neon', ORGANISME_EMISSOR: 'o10', POSADA_DISPOSICIO: 'Ne', TIPUS_ENVIAMENT: 't10', TITULAR: 'tit10', ESTAT: 'e10' }\r\n\r\n\r\n      ]\r\n\r\n    }\r\n  }\r\n\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ejemplo-angular/src/stories/gva-tabs.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<GvaTabComponent>",
+                "defaultValue": "{\r\n  title: 'GVA/General/gva-tab',\r\n  component: GvaTabComponent,\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [],\r\n      imports: [BrowserAnimationsModule, GvaTabComponent, MatButtonModule, MatDividerModule],\r\n      providers: [\r\n        provideAnimations()\r\n      ]\r\n    }),\r\n  ],\r\n\r\n  tags: ['autodocs'],\r\n  parameters: {\r\n\r\n    layout: 'fullscreen',\r\n  },\r\n  argTypes: {\r\n    tabs: {\r\n      control: { type: 'array' },\r\n      description: 'Nombre de las tabs y contenido',\r\n      defaultValue: [\r\n        'Tab 1',\r\n        'Tab 2'\r\n      ]\r\n\r\n    }\r\n  }\r\n}"
+            },
+            {
+                "name": "PopupSimple",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ejemplo-angular/src/stories/gva-popup.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n   nombre: 'Abrir',\r\n   \r\n  },\r\n}"
+            },
+            {
+                "name": "preview",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ejemplo-angular/.storybook/preview.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Preview",
+                "defaultValue": "{\r\n  parameters: {\r\n    docs: {\r\n      toc: true, // 👈 Enables the table of contents\r\n    },\r\n    controls: {\r\n      matchers: {\r\n        color: /(background|color)$/i,\r\n        date: /Date$/i,\r\n      },\r\n    },\r\n  },\r\n}"
+            },
+            {
+                "name": "TablaSimple",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ejemplo-angular/src/stories/gva-tabla.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    nombreColumnas: ['POSITION', 'CONCEPTE', 'DESCRIPCIO', 'ORGANISME_EMISSOR', 'POSADA_DISPOSICIO', 'TIPUS_ENVIAMENT', 'TITULAR', 'ESTAT']\r\n\r\n  }\r\n}"
+            },
+            {
+                "name": "TabSimple",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ejemplo-angular/src/stories/gva-tabs.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    tabs: [\r\n      'Tab 1',\r\n      'Tab 2' \r\n    ]\r\n  }\r\n}"
+            },
+            {
+                "name": "Tramita",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ejemplo-angular/src/stories/gva-cabecera.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    ci: 'Tramita'\r\n   \r\n  },\r\n}"
+            }
+        ],
+        "functions": [],
+        "typealiases": [
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<GvaCabeceraComponent>",
+                "file": "projects/ejemplo-angular/src/stories/gva-cabecera.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<GvaMartePopupComponent>",
+                "file": "projects/ejemplo-angular/src/stories/gva-popup.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<GvaTablaComponent>",
+                "file": "projects/ejemplo-angular/src/stories/gva-tabla.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<GvaTabComponent>",
+                "file": "projects/ejemplo-angular/src/stories/gva-tabs.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            }
+        ],
+        "enumerations": [],
+        "groupedVariables": {
+            "projects/ejemplo-angular/src/stories/gva-cabecera.stories.ts": [
+                {
+                    "name": "Dinote",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ejemplo-angular/src/stories/gva-cabecera.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n   ci: 'Dinote'\r\n   \r\n  }\r\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ejemplo-angular/src/stories/gva-cabecera.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<GvaCabeceraComponent>",
+                    "defaultValue": "{\r\n  title: 'GVA/General/gva-cabecera',\r\n  component: GvaCabeceraComponent,\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [],\r\n      imports: [GvaCabeceraComponent,MatButtonModule, MatDividerModule],\r\n    }),\r\n  ],\r\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs\r\n  tags: ['autodocs'],\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n  argTypes: {\r\n    ci:{\r\n      control: { type:'text'},\r\n      description: 'Nombre del CI',\r\n      defaultValue: 'Dinote'\r\n\r\n    },\r\n    logo:{\r\n      description: 'Logo de la cabecera',\r\n      options: ['gv_blanco.png', 'gv_rojo.png', 'gv_negro.png'],\r\n      control: { type:'select'}\r\n    } \r\n  },\r\n}"
+                },
+                {
+                    "name": "Tramita",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ejemplo-angular/src/stories/gva-cabecera.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    ci: 'Tramita'\r\n   \r\n  },\r\n}"
+                }
+            ],
+            "projects/ejemplo-angular/src/stories/gva-popup.stories.ts": [
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ejemplo-angular/src/stories/gva-popup.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<GvaPopup>",
+                    "defaultValue": "{\r\n  title: 'GVA/Marte/gva-marte-popup',\r\n  component: GvaPopup,\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [],\r\n      imports: [GvaPopup,MatButtonModule, MatDividerModule],\r\n    }),\r\n  ],\r\n\r\n  tags: ['autodocs'],\r\n  parameters: {\r\n    \r\n    layout: 'fullscreen',\r\n  },\r\n  args: {\r\n   nombre: 'Abrir',\r\n  },\r\n}"
+                },
+                {
+                    "name": "PopupSimple",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ejemplo-angular/src/stories/gva-popup.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n   nombre: 'Abrir',\r\n   \r\n  },\r\n}"
+                }
+            ],
+            "projects/ejemplo-angular/src/stories/gva-tabla.stories.ts": [
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ejemplo-angular/src/stories/gva-tabla.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<GvaTablaComponent>",
+                    "defaultValue": "{\r\n  title: 'GVA/General/gva-tabla',\r\n  component: GvaTablaComponent,\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [],\r\n      imports: [BrowserAnimationsModule,GvaTablaComponent, MatButtonModule, MatDividerModule],\r\n      providers: [\r\n        provideAnimations()\r\n      ]\r\n    }),\r\n  ],\r\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs\r\n  tags: ['autodocs'],\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n  argTypes: {\r\n    nombreColumnas: {\r\n      control: { type: 'array' },\r\n      description: 'Nombre de las columnas',\r\n      defaultValue: ['POSITION', 'CONCEPTE', 'DESCRIPCIO', 'ORGANISME_EMISSOR', 'POSADA_DISPOSICIO', 'TIPUS_ENVIAMENT', 'TITULAR', 'ESTAT']\r\n\r\n    },\r\n    dataSource: {\r\n      control: { type: 'array' },\r\n      description: 'Datos de la tabla',\r\n      defaultValue: [\r\n        { POSITION: 1, CONCEPTE: '1', DESCRIPCIO: 'Hydrogen', ORGANISME_EMISSOR: 'o1', POSADA_DISPOSICIO: 'H', TIPUS_ENVIAMENT: 't1', TITULAR: 'tit1', ESTAT: 'e1' },\r\n        { POSITION: 2, CONCEPTE: '2', DESCRIPCIO: 'Helium', ORGANISME_EMISSOR: 'o2', POSADA_DISPOSICIO: 'He', TIPUS_ENVIAMENT: 't2', TITULAR: 'tit2', ESTAT: 'e2' },\r\n        { POSITION: 3, CONCEPTE: '3', DESCRIPCIO: 'Lithium', ORGANISME_EMISSOR: 'o3', POSADA_DISPOSICIO: 'Li', TIPUS_ENVIAMENT: 't3', TITULAR: 'tit3', ESTAT: 'e3' },\r\n        { POSITION: 4, CONCEPTE: '4', DESCRIPCIO: 'Beryllium', ORGANISME_EMISSOR: 'o4', POSADA_DISPOSICIO: 'Be', TIPUS_ENVIAMENT: 't4', TITULAR: 'tit4', ESTAT: 'e4' },\r\n        { POSITION: 5, CONCEPTE: '5', DESCRIPCIO: 'Boron', ORGANISME_EMISSOR: 'o5', POSADA_DISPOSICIO: 'B', TIPUS_ENVIAMENT: 't5', TITULAR: 'tit5', ESTAT: 'e5' },\r\n        { POSITION: 6, CONCEPTE: '6', DESCRIPCIO: 'Carbon', ORGANISME_EMISSOR: 'o6', POSADA_DISPOSICIO: 'C', TIPUS_ENVIAMENT: 't6', TITULAR: 'tit6', ESTAT: 'e6' },\r\n        { POSITION: 7, CONCEPTE: '7', DESCRIPCIO: 'Nitrogen', ORGANISME_EMISSOR: 'o7', POSADA_DISPOSICIO: 'N', TIPUS_ENVIAMENT: 't7', TITULAR: 'tit7', ESTAT: 'e7' },\r\n        { POSITION: 8, CONCEPTE: '8', DESCRIPCIO: 'Oxygen', ORGANISME_EMISSOR: 'o8', POSADA_DISPOSICIO: 'O', TIPUS_ENVIAMENT: 't8', TITULAR: 'tit8', ESTAT: 'e8' },\r\n        { POSITION: 9, CONCEPTE: '9', DESCRIPCIO: 'Fluorine', ORGANISME_EMISSOR: 'o9', POSADA_DISPOSICIO: 'F', TIPUS_ENVIAMENT: 't9', TITULAR: 'tit9', ESTAT: 'e9' },\r\n        { POSITION: 10, CONCEPTE: '10', DESCRIPCIO: 'Neon', ORGANISME_EMISSOR: 'o10', POSADA_DISPOSICIO: 'Ne', TIPUS_ENVIAMENT: 't10', TITULAR: 'tit10', ESTAT: 'e10' }\r\n\r\n\r\n      ]\r\n\r\n    }\r\n  }\r\n\r\n}"
+                },
+                {
+                    "name": "TablaSimple",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ejemplo-angular/src/stories/gva-tabla.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    nombreColumnas: ['POSITION', 'CONCEPTE', 'DESCRIPCIO', 'ORGANISME_EMISSOR', 'POSADA_DISPOSICIO', 'TIPUS_ENVIAMENT', 'TITULAR', 'ESTAT']\r\n\r\n  }\r\n}"
+                }
+            ],
+            "projects/ejemplo-angular/src/stories/gva-tabs.stories.ts": [
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ejemplo-angular/src/stories/gva-tabs.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<GvaTabComponent>",
+                    "defaultValue": "{\r\n  title: 'GVA/General/gva-tab',\r\n  component: GvaTabComponent,\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [],\r\n      imports: [BrowserAnimationsModule, GvaTabComponent, MatButtonModule, MatDividerModule],\r\n      providers: [\r\n        provideAnimations()\r\n      ]\r\n    }),\r\n  ],\r\n\r\n  tags: ['autodocs'],\r\n  parameters: {\r\n\r\n    layout: 'fullscreen',\r\n  },\r\n  argTypes: {\r\n    tabs: {\r\n      control: { type: 'array' },\r\n      description: 'Nombre de las tabs y contenido',\r\n      defaultValue: [\r\n        'Tab 1',\r\n        'Tab 2'\r\n      ]\r\n\r\n    }\r\n  }\r\n}"
+                },
+                {
+                    "name": "TabSimple",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ejemplo-angular/src/stories/gva-tabs.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    tabs: [\r\n      'Tab 1',\r\n      'Tab 2' \r\n    ]\r\n  }\r\n}"
+                }
+            ],
+            "projects/ejemplo-angular/.storybook/preview.ts": [
+                {
+                    "name": "preview",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ejemplo-angular/.storybook/preview.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Preview",
+                    "defaultValue": "{\r\n  parameters: {\r\n    docs: {\r\n      toc: true, // 👈 Enables the table of contents\r\n    },\r\n    controls: {\r\n      matchers: {\r\n        color: /(background|color)$/i,\r\n        date: /Date$/i,\r\n      },\r\n    },\r\n  },\r\n}"
+                }
+            ]
+        },
+        "groupedFunctions": {},
+        "groupedEnumerations": {},
+        "groupedTypeAliases": {
+            "projects/ejemplo-angular/src/stories/gva-cabecera.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<GvaCabeceraComponent>",
+                    "file": "projects/ejemplo-angular/src/stories/gva-cabecera.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "projects/ejemplo-angular/src/stories/gva-popup.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<GvaMartePopupComponent>",
+                    "file": "projects/ejemplo-angular/src/stories/gva-popup.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "projects/ejemplo-angular/src/stories/gva-tabla.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<GvaTablaComponent>",
+                    "file": "projects/ejemplo-angular/src/stories/gva-tabla.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "projects/ejemplo-angular/src/stories/gva-tabs.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<GvaTabComponent>",
+                    "file": "projects/ejemplo-angular/src/stories/gva-tabs.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ]
+        }
+    },
+    "routes": [],
+    "coverage": {
+        "count": 0,
+        "status": "low",
+        "files": [
+            {
+                "filePath": "projects/ejemplo-angular/.storybook/preview.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "preview",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ejemplo-angular/src/stories/gva-cabecera.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Dinote",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ejemplo-angular/src/stories/gva-cabecera.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ejemplo-angular/src/stories/gva-cabecera.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Tramita",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ejemplo-angular/src/stories/gva-popup.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ejemplo-angular/src/stories/gva-popup.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "PopupSimple",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ejemplo-angular/src/stories/gva-tabla.stories.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "datoColumna",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ejemplo-angular/src/stories/gva-tabla.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ejemplo-angular/src/stories/gva-tabla.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "TablaSimple",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ejemplo-angular/src/stories/gva-tabs.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ejemplo-angular/src/stories/gva-tabs.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "TabSimple",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            }
+        ]
+    }
+}

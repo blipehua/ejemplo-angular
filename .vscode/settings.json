@@ -1,0 +1,16 @@
+{
+    "angular-schematics.schematicsDefaultOptions": {
+        "angular-*": {
+            "style": "scss",
+            "externalTemplate": true,
+            "skipStyle": true,
+            "inlineStyle": true
+        },
+        "angular-component": {
+            "skipPathSubfolder": true
+        },
+        "angular-page": {
+            "skipPathSubfolder": true
+        }
+    }
+}
